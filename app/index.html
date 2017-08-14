@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>🎤</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="container-fluid p-5 bg-inverse text-white" style="border-bottom: solid 1px #ddd">
+      <div class="container" style="max-width: 750px;">
+        <h6>Search for an Artist:</h6>
+        <div class="input-group">
+          <input class="form-control" placeholder="Who's your jam?" data-music-search type="search">
+          <div class="input-group-btn">
+            <button class="btn btn-success" type="submit" data-music-submit>⇢</button>
+          </div>
+        </div>
+        <div class="text-center pt-4">
+          <audio class="" controls="controls" autoplay src=""></audio>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-5">
+      <div data-music-template class="row">
+        <!-- handlebars template -->
+      </div>
+    </div>
+
+    <script type="text/x-handlebars-template" data-handlebars>
+      <div class="col-3">
+
+        <div class="card mb-4" data-play-song>
+          <div class="card-block">
+            <div class="media">
+              <img class="d-flex mr-3" src="{{ artworkUrl100 }}" alt="{{ artistName }}" class="rounded">
+              <div class="media-body">
+                <h6 class="mt-0">{{ trackName }}</h6>
+                <small>{{ artistName }}</small><br>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="play-song">Preview ⇢</a>
+          </div>
+        </div>
+
+      </div>
+    </script>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
